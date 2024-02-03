@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // MySQL database connection
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'your_mysql_username',
-  password: 'your_mysql_password',
-  database: 'your_database_name',
+  user: 'root',
+  password: '',
+  database: 'gpa',
 });
 
 connection.connect((err) => {
