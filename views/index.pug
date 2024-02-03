@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Grade Tracker
+    link(rel='stylesheet', href='/style.css')
+  body
+    h1 Grade Tracker
+    form(action='/submit' method='post')
+      label(for='subjectId') Select Subject:
+      select(name='subjectId' id='subjectId')
+        each subject in subjects
+          option(value=subject.id) #{subject.name}
+      br
+      label(for='grade') Enter Grade:
+      input(type='text' name='grade' id='grade' required)
+      br
+      input(type='submit' value='Submit')
